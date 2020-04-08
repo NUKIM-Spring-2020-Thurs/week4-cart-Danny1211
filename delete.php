@@ -1,0 +1,20 @@
+<?php
+	session_start();
+	if(isset($_SESSION["i"])){
+		if(isset($_SESSION["goods"]="One-piece")){
+			setcookie("one","",time()-3600);
+			setcookie("onenumber","",time()-3600);
+		}
+		if(isset($_SESSION["goods"]="Naruto")){
+			setcookie("na","",time()-3600);
+			setcookie("nanumber","",time()-3600);
+		}
+		if(isset($_SESSION["goods"]="Bleach")){
+			setcookie("bl","",time()-3600);
+			setcookie("blnumber","",time()-3600);
+		}
+
+	}
+	header('Location:cart.php');
+	//problem:想不到如何判斷他是哪一條cookie的按鈕按的
+?>
